@@ -222,5 +222,46 @@ Rearrange the blocks below so the code works. This function takes a string as in
 })(); 
 </script>
 
-
+## Parsons 6 (Functions)
+Function to go through a list, and sum only the even numbers.
+<div id="function-5-sortableTrash" class="sortable-code"></div> 
+<div id="function-5-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="function-5-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="function-5-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "def sum_even_numbers(numbers): \n" +
+    "    total = 0\n" +
+    "    for num in numbers:\n" +
+    "        if num % 2 == 0:\n" +
+    "            total = total + num\n" +
+    "    return total\n" +
+    "number_list = [1, 2, 3, 4, 5, 6, 7, 8]\n" +
+    "result = sum_even_numbers(number_list)\n" +
+    "print(f&quot;The sum of even numbers is: {result}&quot;)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "function-5-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#function-5-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#function-5-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
 
