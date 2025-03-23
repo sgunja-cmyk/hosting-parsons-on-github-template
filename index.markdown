@@ -8,4 +8,6 @@ title: Parsons Problems
 # Parsons Practice
 
 [Functions](./parsons/functions.html)
+[Dictionaries] (./parsons/dictionaries.html)
+
 
