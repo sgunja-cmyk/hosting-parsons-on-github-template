@@ -214,3 +214,85 @@ Re-arrange the blocks below: Dictionaries can be nested! Create a student inform
 })(); 
 </script>
 
+## Parsons 6 (Dictionary)
+Re-arrange the blocks below:  Create a dictionary with students' names as keys and their test scores as values in a list, then calculate the average score for each student.
+
+<div id="dict-6-sortableTrash" class="sortable-code"></div> 
+<div id="dict-6-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="dict-6-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="dict-6-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "students = {&quot;Alice&quot;: [85, 90, 78], &quot;Bob&quot;: [76, 88, 92], &quot;Charlie&quot;: [91, 84, 89]}\n" +
+    "for student in students:\n" +
+    "    scores = students[student]\n" +
+    "    average = sum(scores) / len(scores)\n" +
+    "    print(student + &quot;&#039;s average score:&quot;, average)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "dict-6-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#dict-6-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#dict-6-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+## Parsons 7 (Dictionary)
+Re-arrange the blocks below: Compare two dictionaries of student scores from different tests and identify students who improved their scores.
+<div id="dict-7-sortableTrash" class="sortable-code"></div> 
+<div id="dict-7-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="dict-7-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="dict-7-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "test1_scores = {&quot;Alice&quot;: 85, &quot;Bob&quot;: 76, &quot;Charlie&quot;: 90, &quot;David&quot;: 82}\n" +
+    "test2_scores = {&quot;Alice&quot;: 88, &quot;Bob&quot;: 72, &quot;Charlie&quot;: 95, &quot;David&quot;: 85}\n" +
+    "improved_students = []\n" +
+    "for student in test1_scores:\n" +
+    "    if student in test2_scores:\n" +
+    "        if test2_scores[student] &gt; test1_scores[student]:\n" +
+    "            improved_students.append(student)\n" +
+    "print(&quot;Students who improved:&quot;, improved_students)\n" +
+    "print(&quot;Number of students who improved:&quot;, len(improved_students))";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "dict-7-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#dict-7-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#dict-7-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
