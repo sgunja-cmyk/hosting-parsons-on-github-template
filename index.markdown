@@ -11,8 +11,10 @@ title: Parsons Problems
 
 [While loops](./parsons/while_loops.html)
 
+[Lists](./parsons/lists.html)
+
 [Functions](./parsons/functions.html)
 
-[Dictionaries](./parsons/dictionaries.html)
+ 
 
 
