@@ -7,6 +7,8 @@ title: Parsons Problems
 ---
 # Parsons Practice: Programming Fundamentals
 
+[If statements](./parsons/if-statements.html)
+
 [For loops](./parsons/for-loops.html)
 
 [While loops](./parsons/while_loops.html)
