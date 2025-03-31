@@ -5,7 +5,7 @@
 layout: default
 title: Parsons Problems
 ---
-# Parsons Practice
+# Parsons Practice: Programming Fundamentals
 
 [For loops](./parsons/for-loops.html)
 
@@ -15,6 +15,6 @@ title: Parsons Problems
 
 [Functions](./parsons/functions.html)
 
- 
+[Dictionaries](./parsons/dictionaries.html)
 
 
