@@ -7,6 +7,8 @@ title: Parsons Problems
 ---
 # Parsons Practice
 
+[For loops](./parsons/for-loops.html)
+
 [While loops](./parsons/while_loops.html)
 
 [Functions](./parsons/functions.html)
